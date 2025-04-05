@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education | Resume Builder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-poppins bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto">
+            <!-- Progress Navigation -->
+            <div class="flex justify-between items-center mb-8">
+                <div class="flex space-x-2">
+                    <a href="personal.html" class="nav-item">
+                        <i class="fas fa-user mr-2"></i> Personal
+                    </a>
+                    <a href="work.html" class="nav-item">
+                        <i class="fas fa-briefcase mr-2"></i> Work
+                    </a>
+                    <div class="nav-item active">
+                        <i class="fas fa-graduation-cap mr-2"></i> Education
+                    </div>
+                    <div class="nav-item">
+                        <i class="fas fa-code mr-2"></i> Skills
+                    </div>
+                    <div class="nav-item">
+                        <i class="fas fa-eye mr-2"></i> Preview
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Content -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden p-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">Education Background</h2>
+                
+                <form id="educationForm">
+                    <div id="educationEntries">
+                        <!-- Education entry template -->
+                        <div class="education-entry mb-8 p-6 border border-gray-200 rounded-lg">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="form-group">
+                                    <label for="institution" class="form-label">Institution *</label>
+                                    <input type="text" id="institution" class="form-input" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="degree" class="form-label">Degree *</label>
+                                    <input type="text" id="degree" class="form-input" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="field" class="form-label">Field of Study</label>
+                                    <input type="text" id="field" class="form-input">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="gpa" class="form-label">GPA</label>
+                                    <input type="number" step="0.1" min="0" max="4" id="gpa" class="form-input">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="startDate" class="form-label">Start Date *</label>
+                                    <input type="month" id="startDate" class="form-input" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="endDate" class="form-label">End Date *</label>
+                                    <input type="month" id="endDate" class="form-input" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="achievements" class="form-label">Notable Achievements</label>
+                                <textarea id="achievements" rows="3" class="form-input"></textarea>
+                            </div>
+                            
+                            <button type="button" class="btn-secondary remove-entry mt-4">
+                                <i class="fas fa-trash mr-2"></i> Remove Education
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <button type="button" id="addEducation" class="btn-secondary mb-6">
+                        <i class="fas fa-plus mr-2"></i> Add Another Institution
+                    </button>
+                    
+                    <div class="flex justify-between mt-8">
+                        <a href="work.html" class="btn-secondary">
+                            <i class="fas fa-arrow-left mr-2"></i> Back
+                        </a>
+                        <button type="submit" class="btn-primary">
+                            Next: Skills <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
